@@ -1,23 +1,23 @@
-# Base stage for building
-FROM node:18-bullseye-slim AS build
+FROM node:20 AS builder
 
-# Set the working directory in the container
 WORKDIR /app
-
-# Copy package.json and package-lock.json
-COPY package*.json ./
-
-# Install dependencies
-RUN npm install
-
-# Copy the entire React app source code to the container
+COPY package.json package-lock.json ./
+RUN npm ci
 COPY . .
-
-# Build the React app
 RUN npm run build
 
-# Expose port 3000 (the port your Node.js app runs on)
-EXPOSE 3000
+FROM node:20 AS runner
 
-# Start the Node.js app
-CMD ["npm", "start"]
+WORKDIR /app
+COPY --from=builder /app ./
+EXPOSE 3000
+CMD ["node", "build/index.js"]
+
+FROM node:20 AS developer
+
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci
+COPY . .
+EXPOSE 3000
+CMD ["npx", "turbo", "dev"]

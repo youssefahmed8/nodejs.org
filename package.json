@@ -38,6 +38,7 @@
   "dependencies": {
     "husky": "9.1.6",
     "lint-staged": "15.2.10",
+    "next": "^latest",
     "turbo": "2.1.3"
   },
   "devDependencies": {

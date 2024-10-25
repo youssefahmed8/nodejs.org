@@ -14,12 +14,10 @@ pipeline {
 
         stage("Run unit testing") {
             steps {
-                dir('nodejs.org') {
-                    sh 'npm run test'
-                }
+                sh 'npm run test'
             }
         }
-        
+
         stage('Build Docker Image') {
             steps {
                 script {

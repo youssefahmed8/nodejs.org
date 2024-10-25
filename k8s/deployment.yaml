@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       app: node-app
-  replicas: 5
+  replicas: 2
   template:
     metadata:
       labels:

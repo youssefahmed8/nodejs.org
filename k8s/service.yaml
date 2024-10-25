@@ -8,7 +8,7 @@ spec:
     app: node-app
   type: NodePort
   ports:
-  - port: 3000
+  - protocol: TCP
+    port: 80                 
     targetPort: 3000
-    nodePort: 31000
-    protocol: TCP
+  type: LoadBalancer

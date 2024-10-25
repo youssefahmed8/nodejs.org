@@ -12,6 +12,12 @@ pipeline {
             }
         }
 
+        stage("Install dependencies") {
+            steps {
+                sh 'npm ci'
+            }
+        }
+
         stage("Run unit testing") {
             steps {
                 sh 'npm run test'

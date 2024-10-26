@@ -1,4 +1,4 @@
-## A Node.js application is deployed from the Node.js GitHub repository to a local Kubernetes cluster (Minikube), utilizing ArgoCD for continuous delivery and Jenkins for automated CI/CD. This architecture optimizes deployment workflows, ensuring both efficient and reliable application delivery.
+### A Node.js application is deployed from the Node.js GitHub repository to a local Kubernetes cluster (Minikube), utilizing ArgoCD for continuous delivery and Jenkins for automated CI/CD. This architecture optimizes deployment workflows, ensuring both efficient and reliable application delivery.
 
 Project Overview
 

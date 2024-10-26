@@ -1,4 +1,8 @@
-# This project deploys a Node.js application from the Node.js GitHub repository to a local Kubernetes cluster, using ArgoCD for continuous delivery and Jenkins for automated CI/CD. This setup streamlines deployment, ensuring efficient and reliable application delivery.
+## A Node.js application is deployed from the Node.js GitHub repository to a local Kubernetes cluster (Minikube), utilizing ArgoCD for continuous delivery and Jenkins for automated CI/CD. This architecture optimizes deployment workflows, ensuring both efficient and reliable application delivery.
+
+Project Overview
+
+![alt text](<Animation.gif>)
 
 ## Prerequisites
 
@@ -51,7 +55,9 @@ Jenkins URL ====>>  http://Your-Machine-IP:8080
 Create a Job and run Buildnow.
 
 ![alt text](<image 1.jpeg>)
+
 - Make sure that the Docker image pushed to Docker Hub
+
 ![alt text](image.png)
 
 ## Now VM for Minikube
